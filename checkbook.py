@@ -14,14 +14,14 @@ print("")
 print("~~ Welcome to your checkbook~~") #prints opening statement, does not repeat
 print("")
 
-while True:
+while True: #repeats until valid pin format
     username = input("Enter your 4 digit user pin: ")
     if len(username) == 4 and username.isdigit():
         break
     else:
         print("Invalid entry.")
 
-if os.path.exists(username + "_transactions.txt"): 
+if os.path.exists(username + "_transactions.txt"): #checks to see if account exists
     print("Opening account.")
 else: 
     print("Account not found. Creating new account.")
@@ -49,16 +49,16 @@ These are your options via the terminal:
 
     if os.path.exists(username + "_transactions.txt"): 
         with open(username + "_transactions.txt") as f:
-            data = json.load(f) #set data list
+            data = json.load(f) #set transaction list specific to user
     else: 
         f= open(username + "_transactions.txt","w+")
         f.write("[]")
         f.close() 
         with open(username + "_transactions.txt") as f:
-            data = json.load(f) #if data list doesnt exist, create it
+            data = json.load(f) #if list doesnt exist, create it
 
     if os.path.exists(username + "_balance.txt"):
-        balance = (open(username + "_balance.txt","r")) #set balance sheet
+        balance = (open(username + "_balance.txt","r")) #set balance sheet specific to user
     else: 
         f= open(username + "_balance.txt","w+")
         f.write("0")
