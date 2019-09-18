@@ -21,10 +21,6 @@ while True:
     else:
         print("Invalid entry.")
 
-    # if os.path.exists("transactions.txt"): 
-    #     with open("transactions.txt") as f:
-    #         data = json.load(f) #open latest data list
-
 if os.path.exists(username + "_transactions.txt"): 
     print("Opening account.")
 else: 
@@ -50,16 +46,6 @@ These are your options via the terminal:
             break
         else:
             print("Invalid entry.")
-
-    # if os.path.exists("transactions.txt"): 
-    #     with open("transactions.txt") as f:
-    #         data = json.load(f) #open latest data list
-    # else: 
-    #     f= open("transactions.txt","w+")
-    #     f.write("[]")
-    #     f.close() 
-    #     with open("transactions.txt") as f:
-    #         data = json.load(f) #if data list doesnt exist, create it and open it
 
     if os.path.exists(username + "_transactions.txt"): 
         with open(username + "_transactions.txt") as f:
