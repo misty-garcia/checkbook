@@ -11,7 +11,7 @@ def exit_program(): #function to exit program
         sys.exit(0)
 
 print("")
-print("~~ Welcome to your checkbook~~") #prints opening statement, does not repeat
+print("~~ Welcome to your checkbook ~~") #prints opening statement, does not repeat
 print("")
 
 while True: #repeats until valid pin format
