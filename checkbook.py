@@ -16,7 +16,7 @@ print("")
 
 while True:
     username = input("Enter your 4 digit user pin: ")
-    if len(username) == 4 and username.isdigit:
+    if len(username) == 4 and username.isdigit():
         break
     else:
         print("Invalid entry.")
